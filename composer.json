@@ -1,0 +1,13 @@
+{
+  "name": "gofintech/logging",
+  "description": "Microscopic PHP logging library for batch processes",
+  "license": "MIT",
+  "require": {
+    "php": "^7.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "GoFinTech\\Logging\\": "src/"
+    }
+  }
+}
