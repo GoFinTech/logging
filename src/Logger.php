@@ -4,7 +4,7 @@ namespace GoFinTech\Logging;
 
 class Logger
 {
-    public static function get($parent)
+    public static function get($parent = null)
     {
         return new Logger();
     }
