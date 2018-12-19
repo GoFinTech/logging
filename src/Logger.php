@@ -16,7 +16,6 @@ class Logger
 
     public function error(string $message, \Exception $ex = null)
     {
-        $msg = "ERROR $message";
         if (is_null($ex))
             $msg = "ERROR $message\n";
         else
@@ -26,7 +25,7 @@ class Logger
         fwrite(STDERR, $msg);
     }
 
-    public function formatException(\Exception $ex): string
+    public static function formatException(\Exception $ex): string
     {
         $className = get_class($ex);
         return "{$ex->getFile()}:{$ex->getLine()} $className: {$ex->getMessage()}";
